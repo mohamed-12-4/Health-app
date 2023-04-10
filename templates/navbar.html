@@ -1,0 +1,29 @@
+<nav>
+    <div class="logo">
+      <a href="#">Healthcare App</a>
+    </div>
+
+    {% if request.user.is_authenticated %}
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    {% else %} 
+
+    <ul class="nav-links">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+
+    {% endif %}
+
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  
